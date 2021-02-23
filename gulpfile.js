@@ -14,14 +14,14 @@ let path = {
 		html: [source_folder + "/*.html", "!"+source_folder + "/_*.html"],//исключаем все файлы начинающиеся с символа подчёркивание
 		css: source_folder + "/scss/style.scss",
 		js: source_folder + "/js/script.js",
-		img: source_folder + "/img/**/*.{jpg, png, svg, gif, ico, webp}",  //две звёздочки означает, что мы будем слушать все подпапки в папке src/img, одна звёздочка - любое название
+		img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)",  //две звёздочки означает, что мы будем слушать все подпапки в папке src/img, одна звёздочка - любое название
 		fonts: source_folder + "/fonts/*.ttf",
 	},
 	watch: {  //указываем что мы будем слушать
 		html: source_folder + "/**/*.html",
 		css: source_folder + "/scss/**/*.scss",
 		js: source_folder + "/js/**/*.js",
-		img: source_folder + "/img/**/*.{jpg, png, svg, gif, ico, webp}",
+		img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)",
 	},
 	clean: "./" + project_folder + "/" //объект который удаляет папку готового проета при кардом запуске галпа
 }
