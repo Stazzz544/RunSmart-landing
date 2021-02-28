@@ -135,7 +135,7 @@ h6 {
 }
 
 .container {
-  width: 950px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -178,6 +178,11 @@ h6 {
   font-weight: 500;
   background: #c70101;
   border-radius: 5px;
+}
+
+.button_submit {
+  padding: 21px 43px;
+  margin-top: 20px;
 }
 
 .title {
@@ -282,6 +287,8 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header__logo {
@@ -366,7 +373,7 @@ h6 {
 
 .flex-item_text a {
   text-decoration: underline;
-  color: #ff0000;
+  color: #c70101;
 }
 
 .flex-item__title {
@@ -375,4 +382,51 @@ h6 {
   line-height: 1.2;
   font-weight: 700;
   color: #0d0d0d;
+}
+
+.consultation {
+  padding: 100px 0px 92px 0px;
+  position: relative;
+  min-height: 680px;
+}
+
+.consultation__title {
+  color: #ffffff;
+  text-align: left;
+  font-family: "MuseoSansCyrl";
+}
+
+.consultation__subtitle {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 80px;
+}
+
+.feed-form {
+  margin-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+}
+
+.feed-form :first-child {
+  margin-top: 0px;
+}
+
+.feed-form input {
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4b4b4b;
 }
