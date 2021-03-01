@@ -18,7 +18,5 @@ testWebP(function (support) {
 });
 
 //==================================
-function logging(a, b) {
-	console.log(a + b);
-}
-logging(3, 5);
+@@include('jquery-migrate-1.2.1.min.js')
+@@include('slick.js')
