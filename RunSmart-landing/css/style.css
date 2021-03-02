@@ -539,3 +539,35 @@ h6 {
 .carusel {
   padding: 81px 0px;
 }
+
+.carusel__inner {
+  width: 750px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carusel .slick-prev {
+  top: 50%;
+  top: translateY(-50%);
+  left: -66px;
+  background: none;
+  position: absolute;
+}
+
+.carusel .slick-prev img {
+  width: 31px;
+  height: 50px;
+}
+
+.carusel .slick-next {
+  top: 50%;
+  top: translateY(-50%);
+  right: -66px;
+  background: none;
+  position: absolute;
+}
+
+.carusel .slick-next img {
+  width: 31px;
+  height: 50px;
+}
