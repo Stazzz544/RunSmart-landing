@@ -23,6 +23,7 @@ testWebP(function (support) {
 @@include('jquery-migrate-1.2.1.min.js')
 @@include('slick.js')
 
+<<<<<<< Updated upstream
 $(document).ready(function () {
 	$('.carusel__inner').slick({
 		infinite: true,
@@ -41,3 +42,14 @@ $(document).ready(function () {
 		]
 	});
 });
+=======
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 1600) { //расстояние при котором блок появится
+		$('.классБлока').fadeIn();
+	} else {
+		$('.классБлока').fadeOut();
+	}
+});
+
+//В CSS блоку поставить display: none, потому что потомм он появится
+>>>>>>> Stashed changes
