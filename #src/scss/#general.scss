@@ -227,7 +227,7 @@
 		color: #0d0d0d;
 	}
 }
-
+//====================================================
 .consultation {
 	padding: 100px 0px 92px 0px;
 	position: relative;
@@ -267,11 +267,12 @@
 	}
 }
 
+//=========================================
+
 .carusel{
-	padding: 81px 0px;
-<<<<<<< Updated upstream
+	padding: 108px 0px;
 	&__inner{
-		width: 750px;
+		max-width: 750px;
 		margin: 0 auto;
 		position: relative;
 	}
@@ -292,15 +293,14 @@
 		right: -66px;
 		background: none;
 		position: absolute;
-		img{
-			width: 31px;
-			height: 50px;
-		}
+			img{
+				width: 31px;
+				height: 50px;
+			}
 	}
 }
 
 
-=======
-}
 
->>>>>>> Stashed changes
+
+

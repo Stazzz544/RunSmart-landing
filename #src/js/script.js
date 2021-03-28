@@ -1,3 +1,7 @@
+@@include('jquery-1.11.0.min.js');
+@@include('jquery-migrate-1.2.1.min.js');
+@@include('slick.js')
+
 //функция для подключения webp
 function testWebP(callback) {
 
@@ -19,37 +23,12 @@ testWebP(function (support) {
 
 //==================================
 
-@@include('jquery-1.11.0.min.js')
-@@include('jquery-migrate-1.2.1.min.js')
-@@include('slick.js')
-
-<<<<<<< Updated upstream
-$(document).ready(function () {
+$(document).ready(function(){
 	$('.carusel__inner').slick({
 		infinite: true,
-		speed: 1300,
-		autoplaySpeed: 2000,
-		prevArrow: '<button type="button" class="slick-prev"><img src="img/icon/arrleft.svg"></button>',
-		nextArrow: '<button type="button" class="slick-next"><img src="img/icon/arrright.svg"></button>',
-		responsive: [
-			{
-				breakpoint: 992,
-				settings: {
-					dots: true,
-					arrows: false
-				}
-			}
-		]
+		speed: 500,
+		// slidesToShow: 1,
+		prevArrow: '<button type="button" class="slick-prev"><img src="../img/icon/arrleft.svg" alt=""></button>',
+		nextArrow: '<button type="button" class="slick-next"><img src="../img/icon/arrright.svg" alt=""></button>'
 	});
 });
-=======
-$(window).scroll(function() {
-	if ($(this).scrollTop() > 1600) { //расстояние при котором блок появится
-		$('.классБлока').fadeIn();
-	} else {
-		$('.классБлока').fadeOut();
-	}
-});
-
-//В CSS блоку поставить display: none, потому что потомм он появится
->>>>>>> Stashed changes

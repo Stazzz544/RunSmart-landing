@@ -537,11 +537,11 @@ h6 {
 }
 
 .carusel {
-  padding: 81px 0px;
+  padding: 108px 0px;
 }
 
 .carusel__inner {
-  width: 750px;
+  max-width: 750px;
   margin: 0 auto;
   position: relative;
 }
