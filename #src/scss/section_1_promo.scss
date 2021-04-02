@@ -1,0 +1,118 @@
+.promo-position{
+	padding: 21px 0 93px 0;
+}
+.promo {
+	min-height: 650px;
+	position: relative;
+	&__title {
+	margin-top: 80px;
+	font-size: 42px;
+	line-height: 1.2;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #ffffff;
+	}
+
+	&__subtitle {
+		margin-top: 15px;
+		font-size: 24px;
+		line-height: 1.2;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+
+	&__flex-end {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__icons-flex {
+		margin-top: 65px;
+		display: flex;
+	}
+
+	&__icon {
+		margin-right: 60px;
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+
+	&__icon-img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&__icon-text {
+		margin-top: 20px;
+		font-size: 14px;
+		line-height: 1.2;
+		font-weight: 500;
+		color: #ffffff;
+		text-align: center;
+	}
+
+	&__button {
+		margin-top: 65px;
+		width: 300px;
+		height: 50px;
+		font-size: 16px;
+	}
+
+	&__link {
+		margin-top: 18px;
+		text-decoration: none;
+		font-size: 16px;
+	line-height: 1.2;
+	font-weight: 500;
+	color: #ffffff;
+		span{
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+	}
+}
+
+
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+		&__logo {
+			margin-top: 5px;
+		}
+		&__official {
+		}
+		&__official-text {
+			margin-top: 5px;
+			font-size: 12px;
+			line-height: 1.2;
+			font-weight: 500;
+			color: #ffffff;
+		}
+		&__official-brends {
+			margin-top: 11px;
+			font-size: 18px;
+			line-height: 1.2;
+			font-weight: 700;
+			color: #ffffff;
+		}
+		&__contacts {
+		}
+		&__phone {
+			font-size: 18px;
+			line-height: 1.2;
+			font-weight: 700;
+			color: #ffffff;
+		}
+		&__button {
+			margin-top: 5px;
+			width: 150px;
+			height: 30px;
+			font-size: 12px;
+		}
+}
+
+//=========================

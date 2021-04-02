@@ -3043,7 +3043,7 @@ $(document).ready(function(){
 	$('.carusel__inner').slick({
 		infinite: true,
 		speed: 500,
-		// slidesToShow: 1,
+		slidesToShow: 1,
 		prevArrow: '<button type="button" class="slick-prev"><img src="../img/icon/arrleft.svg" alt=""></button>',
 		nextArrow: '<button type="button" class="slick-next"><img src="../img/icon/arrright.svg" alt=""></button>'
 	});

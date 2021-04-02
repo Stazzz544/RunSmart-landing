@@ -1,0 +1,40 @@
+
+
+.consultation {
+	padding: 100px 0px 92px 0px;
+	position: relative;
+	min-height: 680px;;
+	&__title {
+		color: #ffffff;
+		text-align: left;
+		font-family: "MuseoSansCyrl";
+	}
+
+	&__subtitle {
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 500;
+	color: #ffffff;
+	margin-top: 80px;
+	}
+}
+
+.feed-form{
+	margin-top: 36px;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	:first-child{
+		margin-top: 0px;
+	}
+	input {
+		height: 50px;
+		background-color: #ffffff;
+		border-radius: 5px;
+		margin-top: 15px;
+		padding: 0 20px;
+		font-size: 14px;
+		font-weight: 300;
+		color: #4b4b4b;
+	}
+}
