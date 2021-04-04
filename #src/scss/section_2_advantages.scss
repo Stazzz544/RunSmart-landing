@@ -10,9 +10,11 @@
 		margin: 65px 7px 0px 7px;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 	&__flex-item {
 		width: 250px;
+		margin: 0px 5px;
 	}
 }
 .advantages-position {
@@ -46,5 +48,17 @@
 		line-height: 1.2;
 		font-weight: 700;
 		color: #0d0d0d;
+	}
+}
+
+@media(max-width: 784px){
+	.advantages{
+		&__flex{
+			justify-content: space-around;
+			margin-top: 30px;
+		}
+		&__flex-item{
+			margin-top: 20px;
+		}
 	}
 }

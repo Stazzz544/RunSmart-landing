@@ -1,0 +1,58 @@
+.reviews {
+
+	&__title {
+	}
+}
+
+.reviews-card {
+	display: flex;
+	max-width: 884px;
+	&_card-1{
+		margin-top: 70px;
+	}
+	&_card-2{
+		margin-top: 102px;
+	}
+	&_card-3{
+		margin-top: 100px;
+	}
+
+	&__photo {
+		margin-right: 62px;
+	}
+
+
+	&__user-name {
+		font-size: 18px;
+		line-height: 1.2;
+		font-weight: 700;
+		color: #0d0d0d;
+	}
+
+	&__user-level {
+		font-size: 14px;
+		line-height: 1.2;
+		font-weight: 300;
+		color: #646464;
+		margin-top: 10px;
+	}
+
+	&__user-review {
+		margin-top: 19px;
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: 300;
+		color: #0d0d0d;
+	}
+}
+
+@media(max-width: 550px){
+	.reviews-card{
+		flex-direction: column-reverse;
+		&__photo {
+			margin-top: 30px;
+			margin-right: 0;
+			text-align: center;
+		}
+	}
+}

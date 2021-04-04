@@ -84,6 +84,7 @@
 			margin-top: 5px;
 		}
 		&__official {
+			margin: 0 20px;
 		}
 		&__official-text {
 			margin-top: 5px;
@@ -115,4 +116,40 @@
 		}
 }
 
-//=========================
+
+@media(max-width: 658px){
+	.header{
+		&__contacts{
+			margin-left: auto;
+			margin-top: 30px;
+			margin-right: 10px;
+		}
+	}
+}
+@media(max-width: 637px){
+	.header{
+		&__official{
+			margin-right: 0px;
+		}
+	}
+}
+@media(max-width: 478px){
+	.header{
+		flex-direction: column;
+		
+	}
+	.promo{
+		&__icon{
+			margin-right: 0;
+		}
+		&__icons-flex{
+			width: 100%;
+			justify-content: space-between;
+		}
+		&__flex-end{
+			&_space-between{
+				
+			}
+		}
+	}
+}
