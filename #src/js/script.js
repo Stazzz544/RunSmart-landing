@@ -1,6 +1,8 @@
 @@include('jquery-1.11.0.min.js');
 @@include('jquery-migrate-1.2.1.min.js');
 @@include('slick.js')
+@@include('jquery.validate.min.js')
+
 
 //функция для подключения webp
 function testWebP(callback) {
@@ -65,4 +67,33 @@ $(document).ready(function(){
 			$('.overlay, #order').fadeIn('slow');
 		})
 	})
+
+	//validation
+
+	$('#consultation-form').validate();
+	$('#consultation form').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2
+			 },
+			phone: "required",
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			name: {
+				required: "We need your email address to contact you",
+				minlength: jQuery.validator.format("Минимально допустимое количество символов: {0}"),
+			 },
+			email: {
+			  required: "Пожалуйста, введите ваш имейл",
+			  email: "Формат адреса должен быть: name@domain.com"
+			}
+		}
+	});
+	$('#order form').validate();
 });
+
