@@ -301,6 +301,16 @@ h6 {
   text-align: center;
 }
 
+.error {
+  border: 1px solid #c70101;
+  text-align: center;
+  margin-top: 15px;
+}
+
+label.error {
+  border: none;
+}
+
 .promo-position {
   padding: 21px 0 93px 0;
 }
@@ -516,6 +526,17 @@ h6 {
   font-weight: 500;
   color: #ffffff;
   margin-top: 80px;
+}
+
+.consultation .error {
+  color: #ffffff;
+  border: 1px solid #c70101;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.consultation label.error {
+  border: none;
 }
 
 .feed-form {

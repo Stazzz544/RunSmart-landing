@@ -67,3 +67,13 @@
 }
 
 //////////////////////
+
+.error{
+	border: 1px solid $main-color;
+	text-align: center;
+	margin-top: 15px;
+}
+
+label.error{
+	border: none;
+}

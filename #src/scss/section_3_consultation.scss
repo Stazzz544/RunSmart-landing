@@ -17,6 +17,17 @@
 	color: #ffffff;
 	margin-top: 80px;
 	}
+	
+	.error{
+		color: #ffffff;
+		border: 1px solid $main-color;
+		text-align: center;
+		margin-top: 15px;
+	}
+
+	label.error{
+		border: none;
+	}
 }
 
 .feed-form{

@@ -1,7 +1,8 @@
 @@include('jquery-1.11.0.min.js');
 @@include('jquery-migrate-1.2.1.min.js');
-@@include('slick.js')
-@@include('jquery.validate.min.js')
+@@include('slick.js');
+@@include('jquery.validate.min.js');
+@@include('jquery.maskedinput.min.js');
 
 
 //функция для подключения webp
@@ -70,30 +71,39 @@ $(document).ready(function(){
 
 	//validation
 
-	$('#consultation-form').validate();
-	$('#consultation form').validate({
-		rules: {
-			name: {
-				required: true,
-				minlength: 2
-			 },
-			phone: "required",
-			email: {
-				required: true,
-				email: true
-			}
-		},
-		messages: {
-			name: {
-				required: "We need your email address to contact you",
-				minlength: jQuery.validator.format("Минимально допустимое количество символов: {0}"),
-			 },
-			email: {
-			  required: "Пожалуйста, введите ваш имейл",
-			  email: "Формат адреса должен быть: name@domain.com"
-			}
-		}
-	});
-	$('#order form').validate();
+	function validationForm(form){
+		$(form).validate({
+			rules: {
+				name: {
+					required: true,
+					minlength: 2
+				 },
+				phone: "required",
+				email: {
+					required: true,
+					email: true
+				},
+			},
+			messages: {
+				name: {
+					required: "Пожалуйста, введите своё имя",
+					minlength: jQuery.validator.format("Минимально допустимое количество символов: {0}"),
+				 },
+				email: {
+				  required: "Пожалуйста, введите ваш имейл",
+				  email: "Формат адреса должен быть: name@domain.com",
+				},
+				phone: {
+					required: "Пожалуйста введите номер вашего телефона",
+				}
+			},
+		});
+	};
+	validationForm('#consultation-form');
+	validationForm('#consultation form');
+	validationForm('#order form');
+
+	//phone mask
+	$('input[name=phone]').mask("+7 (999) 999-99-99");
 });
 
