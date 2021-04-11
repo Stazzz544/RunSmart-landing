@@ -81,7 +81,22 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 		&__logo {
-			margin-top: 5px;
+			display: block;
+			// height: 56px;
+			// width: 63px;
+			color: #ffffff;
+			font-size: 62px;
+			position: relative;
+			border: 3px solid $main-color;
+			padding: 5px 14px 0px 5px;
+			background-color: #00000080;
+		}
+		&__logo-text{
+			display: inline-block;
+			font-size: 20px;
+			color: #ffffff;
+			max-width: 60px;
+			font-weight: 600;
 		}
 		&__official {
 			margin: 0 20px;
@@ -136,11 +151,21 @@
 @media(max-width: 478px){
 	.header{
 		flex-direction: column;
+		&__logo{
+			width: 165px;
+		}
+		&__official-text{
+			margin-top: 20px;
+		}
 		
 	}
 	.promo{
 		&__icon{
 			margin-right: 0;
+		}
+		&__title{
+			font-size: 37px;
+			font-style: italic;
 		}
 		&__icons-flex{
 			width: 100%;

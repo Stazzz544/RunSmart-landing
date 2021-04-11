@@ -21,6 +21,7 @@
 		transform: skewX(-25deg);
 		margin-right: 10px;
 		cursor: pointer;
+		transition: all 0.5s;
 		div{
 			transform: skewX(25deg);
 		}
@@ -31,6 +32,7 @@
 			color: #ffffff;
 			background-color: $main-color;
 			border: none;
+			transition: all 0.5s;
 		}
 	}
 	&__content{

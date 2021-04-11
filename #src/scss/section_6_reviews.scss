@@ -19,9 +19,26 @@
 
 	&__photo {
 		margin-right: 62px;
+		position: relative;
+		width: 445px;
+		height: 169px;
+		
 	}
-
-
+	&__photo-flex{
+		display: flex;
+		width: 169px;
+		height: 169px;
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			object-fit: cover;
+			top: 0;
+			left: 0;
+			z-index: -2;
+			border-radius: 100%;
+		}
+	}
 	&__user-name {
 		font-size: 18px;
 		line-height: 1.2;
@@ -53,6 +70,7 @@
 			margin-top: 30px;
 			margin-right: 0;
 			text-align: center;
+			width: 169px;
 		}
 	}
 }

@@ -1,15 +1,16 @@
 @import "mixins";
+@import "animate.min";
 @import "fonts";
+@import "icomoon";
 @import "reset";
 @import "variables";
 @import "slick";
 @import "#general";
-@import "section_1_promo.scss";
-@import "section_2_advantages.scss";
-@import "section_3_consultation.scss";
-@import "section_4_slider.scss";
-@import "section_5_catalog.scss";
-@import "section_6_reviews.scss";
-@import "section_7_footer.scss";
-@import "modals.scss";
-
+@import "section_1_promo";
+@import "section_2_advantages";
+@import "section_3_consultation";
+@import "section_4_slider";
+@import "section_5_catalog";
+@import "section_6_reviews";
+@import "section_7_footer";
+@import "modals";

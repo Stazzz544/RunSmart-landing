@@ -15,7 +15,7 @@
 	line-height: 1.2;
 	font-weight: 500;
 	color: #ffffff;
-	margin-top: 80px;
+	margin-top: 40px;
 	}
 	
 	.error{
@@ -47,5 +47,11 @@
 		font-size: 14px;
 		font-weight: 300;
 		color: #4b4b4b;
+	}
+}
+
+@media(max-width: 347px){
+	.feed-form{
+		max-width: 280px;
 	}
 }
