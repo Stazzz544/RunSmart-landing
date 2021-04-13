@@ -2,14 +2,22 @@
 	font-family: "MuseoSansCyrl";
 }
 
+html{
+	scroll-behavior: smooth;
+}
 
+body{
+	// overflow: hidden;
+}
 
+.global-wrapper{
+	overflow: hidden;
+}
 //reusible class
 
 .container {
 	max-width: 970px;
 	margin   : 0 auto;
-	// overflow : hidden;
 	padding: 0 10px;
 }
 
@@ -53,6 +61,22 @@
 	font-weight   : 500;
 	background    : $main-color;
 	border-radius : 5px;
+	position: relative;
+	&::after{
+		content: "";
+		position: absolute;
+		left: 14%;
+		height: 1px;
+		background-color: #ffffff;
+		width: 0%;
+		top: 73%;
+		transition: all 1s;
+		}
+	&:hover::after{
+		transition: all 1s;
+		width: 72%;
+		
+	}
 
 	&_submit {
 		padding   : 21px 43px;
@@ -104,4 +128,16 @@ label.error{
 	border-style: solid;
 	border-color: rgb(204, 204, 204);
 	border-image: initial;
+}
+
+.pageup{
+	display: none;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	width: 40px;
+	height: 40px;
+	img{
+		width: 100%;
+	}
 }

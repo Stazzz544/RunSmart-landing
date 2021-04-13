@@ -27,8 +27,7 @@
 	align-items: center;
 	color: $main-color;
 	font-size: 54px;
-
-	&_text {
+	&__text {
 		margin-top: 26px;
 		text-align: center;
 		font-size: 14px;
@@ -50,6 +49,7 @@
 		line-height: 1.2;
 		font-weight: 700;
 		color: #0d0d0d;
+		text-align: center;
 	}
 }
 

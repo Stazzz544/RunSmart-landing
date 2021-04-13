@@ -9,6 +9,7 @@ let path = {
 		js: project_folder + "/js/",
 		img: project_folder + "/img/",
 		fonts: project_folder + "/fonts",
+		mailer: project_folder + "/mailer",
 	},
 	src: {  //пути вывода готовых файлов проекта
 		html: [source_folder + "/*.html", "!"+source_folder + "/_*.html"],//исключаем все файлы начинающиеся с символа подчёркивание
@@ -22,6 +23,7 @@ let path = {
 		css: source_folder + "/scss/**/*.scss",
 		js: source_folder + "/js/**/*.js",
 		img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)",
+		mailer: source_folder + "/mailer",
 	},
 	clean: "./" + project_folder + "/" //объект который удаляет папку готового проета при кардом запуске галпа
 }
@@ -157,7 +159,12 @@ gulp.task('otf2ttf', function() {
 			formats: ['ttf']
 		}))
 		.pipe(dest(source_folder + '/fonts/'));
-})
+});
+
+gulp.task('mailer', function () {
+	return gulp.src( source_folder + '/mailer/*')
+		.pipe(gulp.dest(project_folder + '/mailer/'));
+});
 
 //инструкция:
 //запускаем gulp
@@ -218,12 +225,12 @@ function clean(params) {//автоматиески удаляет ненужны
 	return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);//процесс выполнения
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts,), fontsStyle);//процесс выполнения
 let watch = gulp.parallel(build, watchFiles, browserSync);//это сценарий выполнения функций
-
+gulp.task('default', gulp.parallel('mailer'));
 //дружим переменные с галпом
 exports.fontsStyle = fontsStyle;
-exports.fonts = fonts;
+exports.fonts = fonts; 
 exports.images = images;
 exports.js = js;
 exports.css = css;

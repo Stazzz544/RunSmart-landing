@@ -47,6 +47,15 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	&__social-item{
+		position: relative;
+		transition: all 0.3s;
+		bottom: 0px;
+		&:hover{
+			bottom: 5px;
+			transition: all 0.3s
+		}
+	}
 }
 
 @media(max-width: 462px){

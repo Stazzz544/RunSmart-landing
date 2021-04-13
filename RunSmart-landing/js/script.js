@@ -3094,9 +3094,12 @@ $(document).ready(function(){
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
-		prevArrow: '<button type="button" class="slick-prev"><img src="../img/icon/arrleft.svg" alt=""></button>',
-		nextArrow: '<button type="button" class="slick-next"><img src="../img/icon/arrright.svg" alt=""></button>'
+		autoplay: true,
+		autoplaySpeed: 2000,
+		prevArrow: '<button type="button" class="slick-prev"><img src="img/icon/arrleft.svg" alt=""></button>',
+		nextArrow: '<button type="button" class="slick-next"><img src="img/icon/arrright.svg" alt=""></button>'
 	});
+//tabs
 	$('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
 		$(this)
 		  .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -3116,6 +3119,14 @@ $(document).ready(function(){
 	toggleSlide('.catalog-item__link');
 	toggleSlide('.catalog-item__link-back');
 
+	//pageup
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 1600) {
+			$('.pageup').fadeIn();
+		 } else {
+			 $('.pageup').fadeOut();
+		 }
+	});
 	// Modal
 
 	$('[data-modal=consultation]').on('click', function(){
@@ -3174,7 +3185,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		$.ajax({
 			type: "POST",
-			url: "../smart.php",
+			url: "../mailer/smart.php",
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");
