@@ -141,3 +141,7 @@ label.error{
 		width: 100%;
 	}
 }
+
+input:valid {
+	border: 1px solid green; /* Красная рамка для обязательных полей */
+ }

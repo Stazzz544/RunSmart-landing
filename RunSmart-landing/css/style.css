@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*!
  * animate.css - https://animate.style/
  * Version - 4.1.1
@@ -4693,6 +4695,11 @@ label.error {
 
 .pageup img {
   width: 100%;
+}
+
+input:valid {
+  border: 1px solid green;
+  /* Красная рамка для обязательных полей */
 }
 
 .promo-position {
