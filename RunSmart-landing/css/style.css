@@ -4302,8 +4302,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?wysl3n");
-  src: url("fonts/icomoon.eot?wysl3n#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?wysl3n") format("truetype"), url("fonts/icomoon.woff?wysl3n") format("woff"), url("fonts/icomoon.svg?wysl3n#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?wysl3n");
+  src: url("../fonts/icomoon.eot?wysl3n#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff?wysl3n") format("woff"), url("../fonts/icomoon.svg?wysl3n#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -4700,7 +4700,7 @@ label.error {
 }
 
 .promo {
-  min-height: 650px;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -5505,13 +5505,15 @@ label.error {
   }
 }
 
-@media (max-width: 784px) {
+@media (max-width: 831px) {
   .advantages__flex {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     margin-top: 30px;
   }
+}
 
+@media (max-width: 784px) {
   .advantages__flex-item {
     margin-top: 20px;
   }
@@ -5570,6 +5572,12 @@ label.error {
   }
 }
 
+@media (max-width: 500px) {
+  .modal__close {
+    right: 50px;
+  }
+}
+
 @media (max-width: 478px) {
   .header {
     -webkit-box-orient: vertical;
@@ -5606,6 +5614,16 @@ label.error {
 @media (max-width: 462px) {
   .footer__info {
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .consultation {
+    padding: 32px 0 92px 0;
+  }
+
+  .consultation__subtitle {
+    margin-top: 17px;
   }
 }
 

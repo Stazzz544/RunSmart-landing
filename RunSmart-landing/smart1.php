@@ -8,17 +8,17 @@ $name = $_POST['name']; //получаем из  инпута в html
 $phone = $_POST['phone']; //получаем из  инпута в html
 $email = $_POST['email']; //получаем из  инпута в html
 $myEmail = 'stas_mail_test1@mail.ru'; //email владельца сайта
-        //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+        // $mail->SMTPDebug = 2;                               // Enable verbose debug output
 
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';                                 // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'stas_mail_test@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'SPQR_Rome-will-win!3000'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->Password = '1Dm4tKEcqOjb9pXKcQc5'; // Ваш пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
-$mail->setFrom('stas_mail_test@mail.ru','Имя сайта'); // от кого будет уходить письмо?
+$mail->setFrom('stas_mail_test@mail.ru','Smart-camera-shop'); // от кого будет уходить письмо?
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $getters = ['a', 'b'];

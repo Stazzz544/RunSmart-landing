@@ -60,3 +60,11 @@
 #consultation, #order, #thanks{
 	display: none;
 }
+
+@media(max-width: 500px){
+	.modal{
+		&__close{
+			right: 50px;
+		}
+	}
+}

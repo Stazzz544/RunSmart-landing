@@ -118,56 +118,54 @@ $(document).ready(function(){
 
 	//validation
 
-	function validationForm(form){
+	function validateForms(form){
 		$(form).validate({
-			rules: {
-				name: {
-					required: true,
-					minlength: 2
-				 },
-				phone: "required",
-				email: {
-					required: true,
-					email: true
-				},
-			},
-			messages: {
-				name: {
-					required: "Пожалуйста, введите своё имя",
-					minlength: jQuery.validator.format("Минимально допустимое количество символов: {0}"),
-				 },
-				email: {
-				  required: "Пожалуйста, введите ваш имейл",
-				  email: "Формат адреса должен быть: name@domain.com",
-				},
-				phone: {
-					required: "Пожалуйста введите номер вашего телефона",
-				}
-			},
+			 rules: {
+				  name: {
+						required: true,
+						minlength: 2
+				  },
+				  phone: "required",
+				  email: {
+						required: true,
+						email: true
+				  }
+			 },
+			 messages: {
+				  name: {
+						required: "Пожалуйста, введите свое имя",
+						minlength: jQuery.validator.format("Введите {0} символа!")
+					 },
+				  phone: "Пожалуйста, введите свой номер телефона",
+				  email: {
+					 required: "Пожалуйста, введите свою почту",
+					 email: "Неправильно введен адрес почты"
+				  }
+			 }
 		});
-	};
-	validationForm('#consultation-form');
-	validationForm('#consultation form');
-	validationForm('#order form');
+  };
 
-	//phone mask
-	$('input[name=phone]').mask("+7 (999) 999-99-99");
+  validateForms('#consultation-form');
+  validateForms('#consultation form');
+  validateForms('#order form');
 
-	//Настройка для php mailer для отправки без перезагрузки(ajax)
-	$('form').submit(function(e) {
+  $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+  $('form').submit(function(e) {
 		e.preventDefault();
 		$.ajax({
-			type: "POST",
-			url: "../mailer/smart.php",
-			data: $(this).serialize()
+			 type: "POST",
+			 url: "mailer/smart.php",
+			 data: $(this).serialize()
 		}).done(function() {
-			$(this).find("input").val("");
-			$('#consultation, #order').fadeOut(); //закрываем отрытые модальные окна с анимацией .fadeOut();
-			$('#thanks').fadeIn();//Открываем другие модальные окна с анимацией .fadeIn()
-			$('form').trigger('reset');
+			 $(this).find("input").val("");
+			 $('#consultation, #order').fadeOut();
+			 $('.overlay, #thanks').fadeIn('slow');
+
+			 $('form').trigger('reset');
 		});
 		return false;
-	});
+  });
 });
 	//ajax запрос
 	 //$('form')обращаюсь ко всем формам(если нужно было бы обратится к id - запись была бы ('#name'), класс по аналогии). 
